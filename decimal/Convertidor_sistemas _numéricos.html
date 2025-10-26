@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor Decimal a Binario</title>
+    
+    <script src="assets/js/decimal-a-binario.js"></script>
+</head>
+
+<body>
+
+    <h1>Convertidor de Decimal a Binario</h1>
+
+    <form action="" autocomplete="off">
+
+        <div>
+            <label for="txtDecimal">Número Decimal Positivo</label>
+            <input id="txtDecimal" type="number" name="txtDecimal" placeholder="Ingrese un número entero positivo"
+                min="0" required>
+        </div>
+        
+        <div>
+            <label for="txtBinario">Resultado Binario</label>
+            <input id="txtBinario" type="text" name="txtBinario" readonly>
+        </div>
+
+        <div>
+            <button type="button" onclick="convertirDecimalABinario()">CONVERTIR</button>
+            <input type="reset" value="LIMPIAR">
+        </div>
+
+    </form>
+
+</body>
+
+</html>

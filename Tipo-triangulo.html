@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3 - Tipo de triángulo</title>
+</head>
+<body>
+  <h1>Ejercicio 3: Tipo de triángulo según sus lados</h1>
+
+  <form id="formTriangulo">
+    <label>Lado A:</label>
+    <input type="number" id="ladoA" step="any" required><br><br>
+
+    <label>Lado B:</label>
+    <input type="number" id="ladoB" step="any" required><br><br>
+
+    <label>Lado C:</label>
+    <input type="number" id="ladoC" step="any" required><br><br>
+
+    <button type="submit">Calcular tipo de triángulo</button>
+    <button type="button" onclick="window.location.href='index.html'">Ir a index</button>
+  </form>
+
+  <script>
+    document.getElementById("formTriangulo").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let a = parseFloat(document.getElementById("ladoA").value);
+      let b = parseFloat(document.getElementById("ladoB").value);
+      let c = parseFloat(document.getElementById("ladoC").value);
+
+      if (a <= 0 || b <= 0 || c <= 0) {
+        alert("Por favor ingresa valores mayores a 0.");
+        return;
+      }
+
+      let mensaje = "";
+
+      if (a === b && b === c) {
+        mensaje = "El triángulo es EQUILÁTERO (todos los lados iguales).";
+      } else if (a === b || a === c || b === c) {
+        mensaje = "El triángulo es ISÓSCELES (dos lados iguales).";
+      } else {
+        mensaje = "El triángulo es ESCALENO (todos los lados diferentes).";
+      }
+
+      alert(mensaje);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evidencia 2 Portafolio JavaScript – Fundamentos de Desarrollo Web</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    header {
+      background: linear-gradient(135deg, #007bff, #00c3ff);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    header h1 {
+      font-weight: bold;
+    }
+    section {
+      margin: 2rem auto;
+      max-width: 1000px;
+    }
+    .feature {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .btn-ejercicio {
+      background: #007bff;
+      color: white;
+      border-radius: 25px;
+      padding: 8px 20px;
+      border: none;
+      transition: all 0.3s;
+    }
+    .btn-ejercicio:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+    footer {
+      background: #212529;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    .navbar {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      height: 100%;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Portafolio JS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+          <li class="nav-item"><a class="nav-link" href="#elementos">Elementos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#aplicaciones">Aplicaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ejercicios">Ejercicios</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header id="inicio" class="mt-5">
+    <h1>🌐 Portafolio de Ejercicios Dinámicos en JavaScript</h1>
+    <p>Fundamentos de Desarrollo Web – Evidencia 2 | FACPYA – LTI</p>
+  </header>
+
+  <main>
+    <!-- INTRODUCCIÓN -->
+    <section>
+      <div class="feature">
+        <h2>¿Qué es JavaScript?</h2>
+        <p>
+          <strong>JavaScript</strong> es un lenguaje de programación interpretado y orientado a objetos que permite crear contenido dinámico e interactivo en la web.
+          Junto con <strong>HTML</strong> y <strong>CSS</strong>, constituye la base del desarrollo web moderno.
+          Gracias a su flexibilidad y compatibilidad, se ha convertido en uno de los lenguajes más usados en todo el mundo.
+        </p>
+        <p>
+          JavaScript puede ejecutarse tanto en el lado del cliente (navegador) como en el servidor (con Node.js), lo que permite desarrollar sitios y aplicaciones completas.
+        </p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Logo de JavaScript" width="150" class="d-block mx-auto my-3">
+      </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS -->
+    <section id="caracteristicas">
+      <div class="feature">
+        <h2>Características más importantes</h2>
+        <ul>
+          <li>Lenguaje interpretado que se ejecuta directamente en el navegador.</li>
+          <li>Manipula el DOM para modificar contenido dinámicamente.</li>
+          <li>Compatible con todos los navegadores modernos.</li>
+          <li>Permite programación orientada a objetos, funcional y basada en eventos.</li>
+          <li>Usado tanto en frontend como en backend con Node.js.</li>
+          <li>Amplio ecosistema de frameworks y librerías.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ELEMENTOS FUNDAMENTALES -->
+    <section id="elementos">
+      <div class="feature">
+        <h2>Elementos Fundamentales</h2>
+        <ul>
+          <li><strong>Variables:</strong> Almacenan datos de diferentes tipos.</li>
+          <li><strong>Operadores:</strong> Realizan operaciones aritméticas y lógicas.</li>
+          <li><strong>Estructuras de control:</strong> Permiten tomar decisiones (<code>if</code>, <code>for</code>, <code>while</code>).</li>
+          <li><strong>Funciones:</strong> Agrupan código reutilizable para tareas específicas.</li>
+          <li><strong>Eventos:</strong> Detectan acciones del usuario (clics, teclas, etc.).</li>
+          <li><strong>Objetos y Arrays:</strong> Estructuras para manejar datos complejos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- APLICACIONES -->
+    <section id="aplicaciones">
+      <div class="feature">
+        <h2>Principales Aplicaciones</h2>
+        <ul>
+          <li>Validación de formularios y control de datos.</li>
+          <li>Creación de animaciones, efectos y transiciones.</li>
+          <li>Desarrollo de juegos interactivos en navegador.</li>
+          <li>Desarrollo de aplicaciones SPA con React, Vue o Angular.</li>
+          <li>Conexión con APIs y servicios externos.</li>
+          <li>Aplicaciones completas con Node.js en el backend.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section>
+      <div class="feature">
+        <h2>🎬 Video: Introducción a JavaScript</h2>
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/upDLs1sn7g4" 
+                  title="Introducción a JavaScript" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section>
+      <div class="feature">
+        <h2>Recursos Externos</h2>
+        <p>Explora estos sitios para aprender más sobre JavaScript:</p>
+        <ul>
+          <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">📘 MDN Web Docs – JavaScript</a></li>
+          <li><a href="https://www.w3schools.com/js/" target="_blank">📘 W3Schools – Tutorial JavaScript</a></li>
+          <li><a href="https://javascript.info/" target="_blank">📘 The Modern JavaScript Tutorial</a></li>
+          <li><a href="https://nodejs.org/es/" target="_blank">📘 Node.js – JavaScript en el Servidor</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EJERCICIOS -->
+    <section id="ejercicios">
+      <div class="feature text-center">
+        <h2>🧩 Ejercicios Prácticos de JavaScript</h2>
+        <p>Explora los ejercicios desarrollados en este portafolio:</p>
+      </div>
+
+      <div class="row g-4 px-3" id="contenedor-ejercicios"></div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>© 2025 | FACPYA – LTI – Fundamentos de Desarrollo Web | Evidencia 2</p>
+  </footer>
+
+  <script>
+  
+    const ejercicios = [
+  { titulo: "Formulario", desc: "Hacer un formulario que permita registrar la informacion basica de manera ordenada y permita cargar archivos al igual que guardar", ruta: "formulario-trap/Registro.html" },
+  { titulo: "Operaciones Básicas", desc: "Permite realizar suma, resta, multiplicación, división y residuo entre dos números.", ruta: "operaciones/operaciones-basicas.html" },
+  { titulo: "Tablas de Multiplicar", desc: "Genera la tabla de multiplicar de un número utilizando un ciclo for.", ruta: "Ciclo.html" },
+  { titulo: "Tipo de Triángulo", desc: "Identifica si un triángulo es equilátero, isósceles o escaleno según sus lados.", ruta: "Tipo-triangulo.html" },
+  { titulo: "Suma de Pares e Impares", desc: "Suma los números pares e impares ingresados hasta que el usuario escriba 0.", ruta: "num-impares.html" },
+  { titulo: "Tabla de Registros", desc: "Simula una tabla con datos de empleados e incluye opciones de editar y eliminar.", ruta: "tablaEmpleados.html" },
+  { titulo: "Funciones Predeterminadas", desc: "Ejemplifica funciones como Math.random(), Math.max(), toFixed(), y Date().", ruta: "funciones.html" },
+  { titulo: "Adivinar el Número Secreto", desc: "Genera un número aleatorio y permite al usuario adivinarlo en 5 intentos.", ruta: "AdivinaElNumero.html" },
+  { titulo: "Convertidor Decimal a Binario", desc: "Convierte un número decimal a binario sin usar funciones automáticas.", ruta: "decimal/Convertidor_sistemas _numéricos.html" },
+  { titulo: "Calculadora de Promedio", desc: "Solicita calificaciones, calcula el promedio e indica si el alumno aprueba.", ruta: "cal-promedio.html" },
+  { titulo: "Contador de Votos", desc: "Simula una votación entre tres candidatos y calcula el resultado final.", ruta: "ejercicio_votaciones/votaciones.html" },
+  { titulo: "Cambio de Color", desc: "Cambia el color de fondo de la página según el color elegido por el usuario.", ruta: "cambio-color/cambiocolor.html" },
+  { titulo: "Cambiar Propiedades del Texto", desc: "Modifica el tamaño del texto de un párrafo al hacer clic.", ruta: "cambiar_texto/cambiar-text.html" },
+  { titulo: "Ocultar y Mostrar Elementos", desc: "Permite mostrar u ocultar una imagen o elemento con un botón.", ruta: "mostrar-boton/ocultar_mostrar_boton.html" }
+];
+
+
+    // Generar dinámicamente las tarjetas
+    const contenedor = document.getElementById("contenedor-ejercicios");
+ejercicios.forEach((e, i) => {
+  const card = document.createElement("div");
+  card.className = "col-md-6";
+  card.innerHTML = `
+    <div class="card p-3">
+      <h5>${i + 1}. ${e.titulo}</h5>
+      <p>${e.desc}</p>
+      <a href="${e.ruta}" target="_blank" class="btn btn-ejercicio mt-2">Abrir</a>
+    </div>
+  `;
+  contenedor.appendChild(card);
+});
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

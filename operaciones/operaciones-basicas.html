@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones Basicas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="eje.1/suma.js"></script>
+    <script src="eje.1/resta.js"></script>
+    <script src="eje.1/multiplicacion.js"></script>
+    <script src="eje.1/division.js"></script>
+    <script src="eje.1/residuo.js"></script>
+</head>
+
+<body>
+    <main class="Container border p-4 mt-5 rounded">
+
+        <h1>Operaciones basicas</h1>
+
+        <form action="" autocomplete="off">
+
+            <section class="row">
+                <div class="col-4">
+                    <label for="txtNumero1">Numero 1</label>
+                    <input id="txtNumero1" type="number" name="txtNumero1" placeholder="Obligatorio" class="form-control" required>
+                </div>
+                <div class="col-4">
+                    <label for="txtNumero2">Numero 2</label>
+                    <input id="txtNumero2" type="number" name="txtNumero1" placeholder="Obligatorio" class="form-control" required>
+                </div>
+
+                <div class="col-4">
+                    <label for="operacion" class="form-label">Selecciona la operación</label>
+                    <select id="operacion" class="form-select" required>
+                        <option value="">-- Elige una operación --</option>
+                        <option value="suma">Suma</option>
+                        <option value="resta">Resta</option>
+                        <option value="multiplicacion">Multiplicación</option>
+                        <option value="division">División</option>
+                        <option value="residuo">Residuo</option>
+                    </select>
+                </div>
+                 
+                <div class="col-12 text-center mt-4">
+                    <button class="btn btn-success" type="button" onclick="ejecutarOperacion()">CALCULAR</button>
+                    <input type="reset" class="btn btn-danger" value="LIMPIAR">
+                </div>
+
+            </section>
+
+
+         <script>
+            function ejecutarOperacion() {
+            const numero1 = parseFloat(document.getElementById('txtNumero1').value);
+            const numero2 = parseFloat(document.getElementById('txtNumero2').value);
+            const operacion = document.getElementById('operacion').value;
+
+            if (isNaN(numero1) || isNaN(numero2)) {
+                alert("Por favor, ingresa ambos números.");
+                return;
+            }
+
+            if (operacion === "") {
+                alert("Selecciona una operación primero.");
+                return;
+            }
+
+            // Dependiendo de la opcion, mandar a llamar con el nombre del archivo
+            switch (operacion) {
+                case "suma":
+                    sumarNumeros();
+                    break;
+                case "resta":
+                    restarNumeros();
+                    break;
+                case "multiplicacion":
+                    multiplicarNumeros();
+                    break;
+                case "division":
+                    dividirNumeros();
+                    break;
+                case "residuo":
+                    residuoNumeros();
+                    break;
+                default:
+                    alert("Operación no válida.");
+            }
+            }
+         </script>
+            
+        </form>
+    </main>       
+</body>
+</html>

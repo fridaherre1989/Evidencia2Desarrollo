@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 9 - Promedio y calificaciones</title>
+</head>
+<body>
+  <h1>Ejercicio 9: Calculadora de promedio y calificaciones</h1>
+
+  <form id="formPromedio">
+    <label>Ingresa las calificaciones separadas por comas:</label><br><br>
+    <input type="text" id="calificaciones" placeholder="Ejemplo: 80,90,75,100"><br><br>
+    <button type="submit">Calcular promedio</button>
+    <button type="button" onclick="window.location.href='index.html'">Ir a index</button>
+  </form>
+
+  <script>
+    document.getElementById("formPromedio").addEventListener("submit", function(e) {
+      e.preventDefault(); // evita que el formulario recargue la página
+
+      let entrada = document.getElementById("calificaciones").value.trim();
+
+      if (entrada === "") {
+        alert("Por favor ingresa al menos una calificación.");
+        return;
+      }
+
+      // Dividir las calificaciones por coma
+      let valores = entrada.split(",").map(num => parseFloat(num.trim()));
+      let validas = valores.filter(num => !isNaN(num) && num >= 0 && num <= 100);
+
+      if (validas.length === 0) {
+        alert("No se ingresaron calificaciones válidas (0 - 100).");
+        return;
+      }
+
+      // Calcular el promedio
+      let suma = validas.reduce((a, b) => a + b, 0);
+      let promedio = suma / validas.length;
+
+      // Mostrar resultado en alerta
+      let mensaje = `Promedio: ${promedio.toFixed(2)}. `;
+      mensaje += promedio >= 70
+        ? "El estudiante APRUEBA. 🎉"
+        : "El estudiante REPRUEBA. 😢";
+
+      alert(mensaje);
+    });
+  </script>
+</body>
+</html>
+

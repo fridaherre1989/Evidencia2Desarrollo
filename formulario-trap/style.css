@@ -1,0 +1,157 @@
+body {
+    background: linear-gradient(135deg, #a0c4ff, #bdb2ff, #ffc6ff);
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+main.Container {
+    background: #ffffffd9;
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 50px 60px;
+    max-width: 1000px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* === ANIMACIÓN DE ENTRADA === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === TÍTULO === */
+h1 {
+    text-align: center;
+    font-weight: 600;
+    color: #5a189a;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #7b2cbf;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* === ETIQUETAS === */
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #4a4a4a;
+}
+
+/* === CAMPOS DE FORMULARIO === */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #9d4edd;
+    box-shadow: 0 0 10px rgba(157, 78, 221, 0.3);
+    background-color: #fff;
+    outline: none;
+}
+
+/* === TEXTAREA === */
+textarea {
+    resize: none;
+    height: 90px;
+}
+
+/* === RADIO Y CHECKBOX === */
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #9d4edd;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* === SECCIONES === */
+section {
+    margin-bottom: 25px;
+}
+
+/* === BOTONES === */
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button.btn-primary {
+    background: linear-gradient(135deg, #7b2cbf, #5a189a);
+    color: white;
+}
+
+button.btn-primary:hover {
+    background: linear-gradient(135deg, #5a189a, #3c096c);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(90, 24, 154, 0.3);
+}
+
+button.btn-success {
+    background: linear-gradient(135deg, #06d6a0, #1b9aaa);
+    color: white;
+}
+
+button.btn-success:hover {
+    background: linear-gradient(135deg, #1b9aaa, #118ab2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(27, 154, 170, 0.3);
+}
+
+/* === BOTONES EN FILA === */
+.row.text-center button {
+    margin: 10px;
+}
+
+/* === EFECTO RESPONSIVE === */
+@media (max-width: 768px) {
+    main.Container {
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .col-4 {
+        width: 100%;
+    }
+}

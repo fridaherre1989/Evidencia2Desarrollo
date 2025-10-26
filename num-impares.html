@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 4</title>
+</head>
+
+<body>
+    <h1>Ciclo While(Mientras)</h1>
+    <form action="">
+        <div id="area"></div>
+        <button type="button" onclick="serie()">EMPEZAR</button>
+        <button type="button" onclick="window.location.href='index.html'">Ir a index</button>
+
+        <script type="text/JavaScript">
+        
+/* 
+function serie(){
+            let i = 100;
+            let texto ;
+            while (i != 0) {
+                 texto += i + '<br>';
+                i --;
+            }
+            document.getElementById('area').innerHTML = texto;
+        }
+*/
+
+        function serie() {
+            let bandera =0;
+            let numero;
+            let sumaPar =0;
+            let sumaImpar =0;
+            while (bandera ==0){
+                numero = parseInt(prompt('ingrese un número'));
+                if (numero % 2 == 0){
+                    sumaPar = sumaPar + numero;
+                    console.log(sumaPar);
+
+                } else {
+                    sumaImpar = sumaImpar + numero;
+                    console.log(sumaImpar);
+
+                }
+
+                if (numero == 0){
+                    bandera =1;
+                }
+                else{
+                    bandera = 0;
+                }
+            }
+            document.getElementById('area').innerHTML = 'La suma de los números pares es: '+sumaPar;
+            document.getElementById('area').innerHTML += '<br>La suma de los números impares es: '+sumaImpar;
+        }
+         </script>

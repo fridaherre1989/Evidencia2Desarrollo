@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main class="Container border p-4 mt-5 rounded">
+
+        <h1>Formulario de Registro</h1>
+
+        <form action="" autocomplete="off">
+
+            <!--Seccion de Datos Personales-->
+            <section class="row">
+                <div class="col-4">
+                    <label for="txtNombre">Nombre(s)</label>
+                    <input id="txtNombre" type="text" name="txtNombre" placeholder="Obligatorio" class="form-control" required>
+                </div>
+                <div class="col-4">
+                    <label for="txtPrimerApellido">Primer Apellido</label>
+                    <input id="txtPrimerApellido" type="text" name="txtPrimerApellido" placeholder="Obligatorio" class="form-control" required>
+                </div>
+                <div class="col-4">
+                    <label for="txtSegundoApellido">Segundo Apellido</label>
+                    <input id="txtSegundoApellido" type="text" name="txtSegundoApellido" placeholder="Opcional" class="form-control" disabled>
+                </div>
+                <div class="col-4">
+                    <textarea id="txtComentario" name="txtComentario" class="form-control"></textarea>
+                </div>
+            </section>
+
+            <!--Seccion de Datos Generales-->
+            <section class="row">
+                <div class="col-4">
+                    <label for="txtFechaNacimiento">Fecha de Nacimiento</label>
+                    <input id="txtFechaNacimiento" type="date" name="txtFechaNacimiento" class="form-control">
+                </div>
+                <div class="col-4">
+                    <label>Género</label><br>
+                    <input id="rdGeneroMasculino" type="radio" name="genero" value="masculino"> 
+                    <label for="rdGeneroMasculino">Masculino</label>
+
+                    <input id="rdGeneroFemenino" type="radio" name="genero" value="femenino"> 
+                    <label for="rdGeneroFemenino">Femenino</label>
+                </div>
+            </section>
+
+            <!--Seccion de Lista de Intereses-->
+
+            <section class="row">
+                <div class="col-4">
+                    <input id="chkProgramacion" type="checkbox" name="chkProgramacion"> Programacion
+                </div>
+                <div class="col-4">
+                    <input id="chkBaseDatos" type="checkbox" name="chkBaseDatos"> Base de Datos
+                </div>
+                <div class="col-4">
+                    <input id="chkDesarolloWeb" type="checkbox" name="chkDesarolloWeb"> Desarollo Web
+                </div>
+            </section>
+
+            <!--Seccion CV-->
+
+            <section class="row">
+                <div class="col-4">
+                    <label for="fileCV">Cargar CV</label>
+                    <input id="fileCV" type="file" name="fileCV" accept=".pdf" class="form-control">
+                </div>
+            </section>
+
+            <!--Seccion Usuario y Contraseña-->
+
+            <section class="row">
+                <div class="col-4">
+                    <label for="txtUsuario">Usuario(cuenta)</label>
+                    <input id="txtUsuario" type="email" name="txtUsuario" placeholder="Correo" class="form-control">
+                </div>
+                <div class="col-4">
+                    <label for="txtContrasena">Contraseña</label>
+                    <input id="txtContrasena" type="password" name="txtContrasena" placeholder="Minimo 8 caracteres" class="form-control">
+                </div>
+                <div class="col-4">
+                    <label for="txtConfirmarContrasena">Confirmar Contraseña</label>
+                    <input id="txtConfirmarContrasena" type="password" name="txtConfirmarContrasena" placeholder="Minimo 8 caracteres" class="form-control">
+                </div>
+            </section>
+
+            <!--Seccion de GUARDAR Y RESET-->
+            <section class="row text-center">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-primary">GUARDAR</button>
+                    <button type="reset" class="btn btn-success">RESETEAR</button>
+                </div>
+            </section>
+            </section>
+            <form action="" autocomplete="off">
+            </form>
+    </main>
+</body>
+
+</html>

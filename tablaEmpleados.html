@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla de Registros</title>
+</head>
+<body>
+
+  <h1>Tabla de Registros - Empleados</h1>
+
+  <form>
+    <label for="cantidad">Número de registros:</label>
+    <input type="number" id="cantidad" min="1">
+    <button type="button" onclick="generarTabla()">Generar Tabla</button>
+    <button type="button" onclick="window.location.href='index.html'">Ir a index</button>
+  </form>
+
+  <div id="tablaContainer"></div>
+
+  <script type="text/javascript">
+    function generarTabla() {
+      let cantidad = parseInt(document.getElementById('cantidad').value);
+      if (isNaN(cantidad) || cantidad <= 0) {
+        alert("Por favor ingresa un número positivo mayor que 0.");
+        return;
+      }
+
+      let empleados = [];
+      for (let i = 0; i < cantidad; i++) {
+        let nombre = prompt("Ingresa el nombre del empleado " + (i + 1) + ":");
+        if (nombre && nombre.trim() !== "") {
+          empleados.push(nombre.trim());
+        } else {
+          alert("Nombre no válido. Intenta nuevamente.");
+          i--;
+        }
+      }
+
+      window.empleados = empleados;
+      generarTablaDesdeLista();
+    }
+
+    function generarTablaDesdeLista() {
+      let empleados = window.empleados;
+      let tabla = "<table border='1'>";
+      tabla += "<tr><th>Id</th><th>Nombre</th><th>Editar</th><th>Eliminar</th></tr>";
+
+      for (let i = 0; i < empleados.length; i++) {
+        tabla += "<tr>";
+        tabla += "<td>" + (i + 1) + "</td>";
+        tabla += "<td>" + empleados[i] + "</td>";
+        tabla += "<td><button onclick='editarEmpleado(" + i + ")'>Editar</button></td>";
+        tabla += "<td><button onclick='eliminarEmpleado(" + i + ")'>Eliminar</button></td>";
+        tabla += "</tr>";
+      }
+
+      tabla += "</table>";
+      document.getElementById("tablaContainer").innerHTML = tabla;
+    }
+
+    function editarEmpleado(index) {
+      let nuevoNombre = prompt("Ingresa el nuevo nombre del empleado:", window.empleados[index]);
+      if (nuevoNombre && nuevoNombre.trim() !== "") {
+        window.empleados[index] = nuevoNombre.trim();
+        generarTablaDesdeLista();
+      }
+    }
+
+    function eliminarEmpleado(index) {
+      if (confirm("¿Deseas eliminar este registro?")) {
+        window.empleados.splice(index, 1);
+        generarTablaDesdeLista();
+      }
+    }
+  </script>
+
+</body>
+</html>

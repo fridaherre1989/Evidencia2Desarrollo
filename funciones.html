@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de funciones predeterminadas</title>
+</head>
+
+<body>
+    <h1>Funciones Predeterminadas en JavaScript</h1>
+    <form action="">
+        <div id="area"></div>
+        <button type="button" onclick="mostrarFunciones()">MOSTRAR</button>
+        <button type="button" onclick="window.location.href='index.html'">Ir a index</button>
+
+        <script type="text/javascript">
+            function mostrarFunciones() {
+                let texto = "";
+
+                // Math.abs()
+                let num1 = -10;
+                texto += "<b>Math.abs()</b>: Devuelve el valor absoluto de un número.<br>";
+                texto += "Ejemplo: Math.abs(" + num1 + ") = " + Math.abs(num1) + "<br><br>";
+
+                // Math.ceil()
+                let num2 = 7.2;
+                texto += "<b>Math.ceil()</b>: Redondea un número hacia arriba.<br>";
+                texto += "Ejemplo: Math.ceil(" + num2 + ") = " + Math.ceil(num2) + "<br><br>";
+
+                // Math.random()
+                let aleatorio = Math.random();
+                texto += "<b>Math.random()</b>: Genera un número aleatorio entre 0 y 1.<br>";
+                texto += "Ejemplo: " + aleatorio + "<br><br>";
+
+                // Math.max() y Math.min()
+                texto += "<b>Math.max() y Math.min()</b>: Devuelven el número máximo y mínimo de una lista.<br>";
+                texto += "Ejemplo: Math.max(5, 12, 9) = " + Math.max(5, 12, 9) + "<br>";
+                texto += "Ejemplo: Math.min(5, 12, 9) = " + Math.min(5, 12, 9) + "<br><br>";
+
+                // Number.isNaN()
+                texto += "<b>Number.isNaN()</b>: Verifica si un valor es NaN (no es un número).<br>";
+                texto += "Ejemplo: Number.isNaN('hola') = " + Number.isNaN("hola") + "<br>";
+                texto += "Ejemplo: Number.isNaN(NaN) = " + Number.isNaN(NaN) + "<br><br>";
+
+                // toFixed()
+                let num3 = 3.1415926;
+                texto += "<b>toFixed()</b>: Redondea un número con una cantidad específica de decimales.<br>";
+                texto += "Ejemplo: " + num3 + ".toFixed(2) = " + num3.toFixed(2) + "<br><br>";
+
+                // Date()
+                let fecha = new Date();
+                texto += "<b>Date()</b>: Devuelve la fecha y hora actuales.<br>";
+                texto += "Ejemplo: " + fecha + "<br><br>";
+
+                // String.length
+                let cadena = "Hola Mundo";
+                texto += "<b>String.length</b>: Devuelve la cantidad de caracteres de una cadena.<br>";
+                texto += "Ejemplo: '" + cadena + "'.length = " + cadena.length + "<br><br>";
+
+                // String.toUpperCase() y toLowerCase()
+                texto += "<b>String.toUpperCase()</b> y <b>String.toLowerCase()</b>: Convierte una cadena a mayúsculas o minúsculas.<br>";
+                texto += "Ejemplo: '" + cadena + "'.toUpperCase() = " + cadena.toUpperCase() + "<br>";
+                texto += "Ejemplo: '" + cadena + "'.toLowerCase() = " + cadena.toLowerCase() + "<br><br>";
+
+                // Math.floor()
+                let num4 = 9.8;
+                texto += "<b>Math.floor()</b>: Redondea un número hacia abajo (al entero más cercano).<br>";
+                texto += "Ejemplo: Math.floor(" + num4 + ") = " + Math.floor(num4) + "<br><br>";
+
+                // Math.pow
+                texto += "<b>Math.pow()</b>: Devuelve un número elevado a una potencia.<br>";
+                texto += "Ejemplo: Math.pow(3, 2) = " + Math.pow(3, 2) + "<br><br>";
+
+                document.getElementById("area").innerHTML = texto;
+            }
+        </script>
+    </form>
+</body>
+
+</html>
